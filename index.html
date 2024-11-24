@@ -1,0 +1,121 @@
+<html>
+
+<head>
+</head>
+
+<body style="background-color: #FCFFE0;">
+  <h1 style="color: #75A47F; text-align: center;">EASY MART</h1>
+  <pre style="color: #75A47F;">
+              <h2>
+ Menu:
+  1. Oil Rs.200
+  2. Cream Rs.400
+  3. Rice Rs.300
+  4. Fruit Rs.150
+  5. Chicken Rs.600
+  <input type="text" id="choice">
+
+  Quantity you want:
+  <input type="text" id="q"></h2></pre>
+  <button style="color: #75A47F; background-color: #BACD92; border: none; font-size: xx-large;" onclick="bill()">Get Bill</button><br>
+
+  <br>
+  <h1 style="color: #75A47F;" id="ab">Discounted Bill : Rs.000/-</h1>
+  <h1 style="color: #75A47F;" id="at">Actual Bil : Rs.000/-</h1>
+
+
+  <script>
+    function bill() {
+      var ch = document.getElementById("choice").value;
+      var chint = parseInt(ch);
+      var q = document.getElementById("q").value;
+      var qint = parseInt(q);
+      switch (chint) {
+        case 1:
+          var total = qint * 200;
+          document.getElementById("ab").innerHTML = "Discounted Bill : " + total;
+          var at1 = total - (total * .1)
+          var at2 = total - (total * .2)
+          var at3 = total - (total * .3)
+
+          if (total < 500)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + total;
+          else if (total >= 500 && total < 1000)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + at1;
+          else if (total >= 1000 && total < 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at2;
+          else if (total >= 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at3;
+          break;
+        case 2:
+          var total = qint * 400;
+          document.getElementById("ab").innerHTML = "Discounted Bill :  " + total;
+          var at1 = (total * .1) - total;
+          var at2 = (total * .2) - total;
+          var at3 = (total * .3) - total;
+          if (total < 500)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + total;
+          else if (total >= 500 && total < 1000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at1;
+          else if (total >= 1000 && total < 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at2;
+          else if (total >= 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at3;
+          break;
+        case 3:
+          var total = qint * 300;
+          document.getElementById("ab").innerHTML = "Discounted Bill : " + total;
+          var at1 = (total * .1) - total;
+          var at2 = (total * .2) - total;
+          var at3 = (total * .3) - total;
+          if (total < 500)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + total;
+          else if (total >= 500 && total < 1000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at1;
+          else if (total >= 1000 && total < 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at2;
+          else if (total >= 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at3;
+          break;
+        case 4:
+          var total = qint * 150;
+          document.getElementById("ab").innerHTML = "Discounted Bill : Rs." + total;
+          var at1 = (total * .1) - total;
+          var at2 = (total * .2) - total;
+          var at3 = (total * .3) - total;
+          if (total < 500)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + total;
+          else if (total >= 500 && total < 1000)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + at1;
+          else if (total >= 1000 && total < 2000)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + at2;
+          else if (total >= 2000)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + at3;
+          break;
+        case 5:
+          var total = qint * 600;
+          document.getElementById("ab").innerHTML = "Discounted bill : " + total;
+          var at1 = (total * .1) - total;
+          var at2 = (total * .2) - total;
+          var at3 = (total * .3) - total;
+          if (total < 500)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + total;
+          else if (total >= 500 && total < 1000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at1;
+          else if (total >= 1000 && total < 2000)
+            document.getElementById("at").innerHTML = "Actual Bill : Rs." + at2;
+          else if (total >= 2000)
+            document.getElementById("at").innerHTML = "Actual Bill Rs.: " + at3;
+          break;
+        default:
+          document.getElementById("ab").innerHTML = "Invalid Choice:";
+          break;
+      }
+
+    }
+  </script>
+
+
+</body>
+
+</html>
